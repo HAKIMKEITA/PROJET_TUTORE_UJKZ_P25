@@ -1,0 +1,2902 @@
+2026-06-16 00:57:56 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m192ms).
+2026-06-16 01:34:19 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m22s820ms).
+2026-06-16 01:59:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m54s634ms).
+2026-06-16 04:07:31 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h8m17s423ms).
+2026-06-16 06:01:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h53m42s662ms).
+2026-06-16 06:53:31 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m16s965ms).
+2026-06-16 07:12:04 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16 07:12:04 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:12:04 [Thread-5] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [api] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.19/java.lang.Thread.run(Thread.java:840)
+2026-06-16 07:12:04 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:12:04 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:12:04 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-16 07:12:04 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-16 07:12:04 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 4479 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:12:04 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:12:04 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:12:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:12:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:12:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-06-16 07:12:06 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:12:06 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:12:06 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:12:06 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1325 ms
+2026-06-16 07:12:06 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:12:06 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:12:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-06-16 07:12:06 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@702baebf
+2026-06-16 07:12:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-06-16 07:12:06 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:12:06 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:12:06 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:12:06 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:12:06 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:12:06 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:12:07 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:12:07 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ac675c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76ac9dfe, org.springframework.security.web.context.SecurityContextHolderFilter@5f80530a, org.springframework.security.web.header.HeaderWriterFilter@6a7c440f, org.springframework.web.filter.CorsFilter@5493dd16, org.springframework.security.web.authentication.logout.LogoutFilter@95625f9, com.ujkz.memoire.security.JwtAuthenticationFilter@1ed9218, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59c72101, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51934a0a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42cefdff, org.springframework.security.web.session.SessionManagementFilter@57c65191, org.springframework.security.web.access.ExceptionTranslationFilter@3f4720c3, org.springframework.security.web.access.intercept.AuthorizationFilter@f43210a]
+2026-06-16 07:12:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-16 07:12:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-06-16 07:12:07 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Started GestionMemoiresBackendApplication in 2.624 seconds (process running for 47115.633)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        teachers t1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        teachers
+        (actif,grade,specialite,user_id) 
+    values
+        (?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        students s1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        students
+        (actif,master_specialite,matricule,promotion,semestre,user_id) 
+    values
+        (?,?,?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        academic_years a1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        academic_years
+        (actif,date_debut,date_fin,libelle) 
+    values
+        (?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        semesters s1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.actif
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        semesters
+        (academic_year_id,actif,libelle) 
+    values
+        (?,?,?)
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        subjects s1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.academic_year_id,
+        s1_0.actif,
+        s1_0.libelle 
+    from
+        semesters s1_0
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.id=?
+2026-06-16 07:12:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        subjects
+        (capacite_max,competences_requises,date_creation,date_publication,encadrant_id,mots_cles,objectifs,publie,resume,semestre_id,statut,superviseur_id,titre) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2026-06-16 07:12:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-16 07:12:12 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 27049 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:12:12 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:12:12 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:12:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16 07:12:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16 07:12:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:12:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:12:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-06-16 07:12:15 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:12:15 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:12:16 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:12:16 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2910 ms
+2026-06-16 07:12:16 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:12:16 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-16 07:12:16 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-16 07:12:16 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:12:16 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-16 07:12:17 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41dcac77
+2026-06-16 07:12:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-16 07:12:17 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:12:18 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:12:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:12:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:12:19 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:12:19 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:12:20 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:12:20 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d7d7a65, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a1b4cd3, org.springframework.security.web.context.SecurityContextHolderFilter@74b3e41c, org.springframework.security.web.header.HeaderWriterFilter@43c30d84, org.springframework.web.filter.CorsFilter@ef5c16, org.springframework.security.web.authentication.logout.LogoutFilter@4cf32d33, com.ujkz.memoire.security.JwtAuthenticationFilter@5853bcf9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b64833, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@766d092d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4404dfa9, org.springframework.security.web.session.SessionManagementFilter@3ee87443, org.springframework.security.web.access.ExceptionTranslationFilter@7d7e46a6, org.springframework.security.web.access.intercept.AuthorizationFilter@50c4eaab]
+2026-06-16 07:12:20 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-06-16 07:12:20 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-16 07:12:20 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:12:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:12:21 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:12:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-16 07:12:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-16 07:12:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:12:21 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-16 07:12:21 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-06-16 07:28:25 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 28218 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:28:25 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:28:25 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:28:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16 07:28:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16 07:28:26 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:28:26 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:28:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-06-16 07:28:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:28:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:28:28 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:28:28 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2780 ms
+2026-06-16 07:28:29 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:28:29 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-16 07:28:29 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-16 07:28:29 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:28:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-16 07:28:29 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e80067
+2026-06-16 07:28:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-16 07:28:29 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:28:31 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:28:31 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:28:31 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:28:31 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:28:32 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:28:32 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:28:32 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d967009, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28b68663, org.springframework.security.web.context.SecurityContextHolderFilter@2bdd4f74, org.springframework.security.web.header.HeaderWriterFilter@1b827719, org.springframework.web.filter.CorsFilter@135662ed, org.springframework.security.web.authentication.logout.LogoutFilter@4743adb3, com.ujkz.memoire.security.JwtAuthenticationFilter@7087f564, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34234ba9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c5c3cd2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3622cc01, org.springframework.security.web.session.SessionManagementFilter@57a59fdc, org.springframework.security.web.access.ExceptionTranslationFilter@46ed637a, org.springframework.security.web.access.intercept.AuthorizationFilter@2c95361e]
+2026-06-16 07:28:33 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-06-16 07:28:33 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-16 07:28:33 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:28:33 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:28:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-16 07:28:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-16 07:28:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:28:33 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-16 07:28:33 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-06-16 07:29:02 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16 07:29:02 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:29:02 [Thread-7] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [api] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.19/java.lang.Thread.run(Thread.java:840)
+2026-06-16 07:29:02 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:02 [Thread-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:29:02 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-06-16 07:29:02 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-06-16 07:29:02 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 4479 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:29:02 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:29:02 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:29:02 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:29:02 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:29:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-06-16 07:29:02 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:29:02 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:29:02 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:29:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 562 ms
+2026-06-16 07:29:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:29:02 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:29:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-06-16 07:29:02 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@3010d9a0
+2026-06-16 07:29:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-06-16 07:29:02 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:29:03 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:29:03 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:29:03 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:29:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:29:03 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:29:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:29:03 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5af65983, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35f12611, org.springframework.security.web.context.SecurityContextHolderFilter@7ae5fcdf, org.springframework.security.web.header.HeaderWriterFilter@2b706689, org.springframework.web.filter.CorsFilter@7c5fe7c1, org.springframework.security.web.authentication.logout.LogoutFilter@1b8e9cd0, com.ujkz.memoire.security.JwtAuthenticationFilter@5ddd13ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb6c4b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@665ab7c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cd7072a, org.springframework.security.web.session.SessionManagementFilter@2a30535a, org.springframework.security.web.access.ExceptionTranslationFilter@3260d0e0, org.springframework.security.web.access.intercept.AuthorizationFilter@50321f47]
+2026-06-16 07:29:03 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-16 07:29:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/api'
+2026-06-16 07:29:03 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Started GestionMemoiresBackendApplication in 1.726 seconds (process running for 48132.166)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        teachers t1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        teachers
+        (actif,grade,specialite,user_id) 
+    values
+        (?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        students s1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        students
+        (actif,master_specialite,matricule,promotion,semestre,user_id) 
+    values
+        (?,?,?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        academic_years a1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        academic_years
+        (actif,date_debut,date_fin,libelle) 
+    values
+        (?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        semesters s1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.actif
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        semesters
+        (academic_year_id,actif,libelle) 
+    values
+        (?,?,?)
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        subjects s1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.academic_year_id,
+        s1_0.actif,
+        s1_0.libelle 
+    from
+        semesters s1_0
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.id=?
+2026-06-16 07:29:04 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        subjects
+        (capacite_max,competences_requises,date_creation,date_publication,encadrant_id,mots_cles,objectifs,publie,resume,semestre_id,statut,superviseur_id,titre) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2026-06-16 07:29:04 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-16 07:43:43 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 29379 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:43:43 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:43:43 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:43:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16 07:43:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16 07:43:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:43:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:43:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-06-16 07:43:45 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:43:45 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:43:45 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:43:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2464 ms
+2026-06-16 07:43:46 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:43:46 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-16 07:43:46 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-16 07:43:46 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:43:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-16 07:43:46 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1dc26159
+2026-06-16 07:43:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-16 07:43:46 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:43:48 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:43:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:43:48 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:43:49 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:43:49 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:43:49 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4743adb3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1acbcc9e, org.springframework.security.web.context.SecurityContextHolderFilter@1b827719, org.springframework.security.web.header.HeaderWriterFilter@7d7e46a6, org.springframework.web.filter.CorsFilter@2d7d7a65, org.springframework.security.web.authentication.logout.LogoutFilter@7f4fc5e5, com.ujkz.memoire.security.JwtAuthenticationFilter@56234c26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74b3e41c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b64833, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a1b4cd3, org.springframework.security.web.session.SessionManagementFilter@18db5e77, org.springframework.security.web.access.ExceptionTranslationFilter@9b09736, org.springframework.security.web.access.intercept.AuthorizationFilter@4e7264e9]
+2026-06-16 07:43:50 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-06-16 07:43:50 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-16 07:43:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:43:50 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:43:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-16 07:43:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-16 07:43:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:43:50 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-16 07:43:50 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-06-16 07:45:42 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16 07:45:42 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:45:42 [Thread-11] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [api] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.19/java.lang.Thread.run(Thread.java:840)
+2026-06-16 07:45:42 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:45:42 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 29839 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:45:42 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:45:42 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:42 [Thread-11] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:45:42 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-06-16 07:45:42 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-06-16 07:45:42 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16 07:45:42 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16 07:45:42 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 4479 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:45:42 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:45:42 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:45:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:45:42 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:45:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-06-16 07:45:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:45:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:45:43 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:45:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 939 ms
+2026-06-16 07:45:43 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:45:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:45:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2026-06-16 07:45:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@66ad69a2
+2026-06-16 07:45:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2026-06-16 07:45:43 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:45:43 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:45:43 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:45:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:45:43 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:45:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:45:44 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:45:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:45:44 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:45:44 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25bfd748, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10c1446b, org.springframework.security.web.context.SecurityContextHolderFilter@41db4412, org.springframework.security.web.header.HeaderWriterFilter@752d3904, org.springframework.web.filter.CorsFilter@3133fcf1, org.springframework.security.web.authentication.logout.LogoutFilter@59ad8cd8, com.ujkz.memoire.security.JwtAuthenticationFilter@7963eea0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60bbae68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cc25e62, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@596d929, org.springframework.security.web.session.SessionManagementFilter@4dee6be6, org.springframework.security.web.access.ExceptionTranslationFilter@54deb3e2, org.springframework.security.web.access.intercept.AuthorizationFilter@a07c2dc]
+2026-06-16 07:45:44 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-16 07:45:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-06-16 07:45:44 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Started GestionMemoiresBackendApplication in 2.518 seconds (process running for 49132.958)
+2026-06-16 07:45:44 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        teachers t1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        teachers
+        (actif,grade,specialite,user_id) 
+    values
+        (?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        students s1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        students
+        (actif,master_specialite,matricule,promotion,semestre,user_id) 
+    values
+        (?,?,?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        academic_years a1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        academic_years
+        (actif,date_debut,date_fin,libelle) 
+    values
+        (?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        semesters s1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.actif
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        semesters
+        (academic_year_id,actif,libelle) 
+    values
+        (?,?,?)
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        subjects s1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.academic_year_id,
+        s1_0.actif,
+        s1_0.libelle 
+    from
+        semesters s1_0
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.id=?
+2026-06-16 07:45:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        subjects
+        (capacite_max,competences_requises,date_creation,date_publication,encadrant_id,mots_cles,objectifs,publie,resume,semestre_id,statut,superviseur_id,titre) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2026-06-16 07:45:45 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-06-16 07:45:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-06-16 07:45:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:45:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:45:46 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:45:46 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4241 ms
+2026-06-16 07:45:46 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:45:46 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-16 07:45:46 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-16 07:45:47 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:45:47 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-16 07:45:47 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d906499
+2026-06-16 07:45:47 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-16 07:45:47 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:45:48 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:45:48 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:45:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:45:49 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:45:49 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:45:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:45:50 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4cf32d33, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d0ec8f3, org.springframework.security.web.context.SecurityContextHolderFilter@43c30d84, org.springframework.security.web.header.HeaderWriterFilter@3bebb7e0, org.springframework.web.filter.CorsFilter@1cef565a, org.springframework.security.web.authentication.logout.LogoutFilter@476fa5fb, com.ujkz.memoire.security.JwtAuthenticationFilter@5ca7728f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f1deb9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@630bb0c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2583d08, org.springframework.security.web.session.SessionManagementFilter@570a826a, org.springframework.security.web.access.ExceptionTranslationFilter@436bcec0, org.springframework.security.web.access.intercept.AuthorizationFilter@30ac200e]
+2026-06-16 07:45:51 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-06-16 07:45:51 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-06-16 07:45:51 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:45:51 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:45:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-16 07:45:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-16 07:45:51 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:45:51 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-16 07:45:51 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-06-16 07:46:47 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 30272 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:46:47 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:46:47 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:46:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-16 07:46:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-16 07:46:47 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-16 07:46:47 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 07:46:47 [Thread-15] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [api] appears to have started a thread named [HikariPool-4 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.19/java.lang.Thread.run(Thread.java:840)
+2026-06-16 07:46:47 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:46:47 [Thread-15] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:46:47 [Thread-15] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:46:47 [Thread-15] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:46:47 [Thread-15] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:47 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:46:47 [Thread-15] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:48 [Thread-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:46:48 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2026-06-16 07:46:48 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2026-06-16 07:46:48 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 4479 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 07:46:48 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 07:46:48 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 07:46:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:46:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:46:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2026-06-16 07:46:49 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:46:49 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:46:49 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:46:49 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1005 ms
+2026-06-16 07:46:49 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:46:49 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:46:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2026-06-16 07:46:49 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5c95f9ce
+2026-06-16 07:46:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2026-06-16 07:46:49 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:46:49 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:46:49 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:49 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:46:49 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:46:49 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 6 JPA repository interfaces.
+2026-06-16 07:46:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2026-06-16 07:46:51 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 07:46:51 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 07:46:51 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 07:46:51 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3809 ms
+2026-06-16 07:46:51 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 07:46:51 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-16 07:46:51 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-16 07:46:52 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 07:46:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-16 07:46:52 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e80067
+2026-06-16 07:46:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-16 07:46:52 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 07:46:54 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "fk7bpjt91jpr48u09fuq4g2luw0" of relation "semesters" does not exist, skipping
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "fkdt1cjx5ve5bdabmuuf3ibrwaq" of relation "students" does not exist, skipping
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "fki7x9osnxmu9muenkl2qo9flyt" of relation "subjects" does not exist, skipping
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "fkbhcv20mcmy8e5lbx2juueegx1" of relation "subjects" does not exist, skipping
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "fkf1y05ioviplv3oolgifhqtsck" of relation "subjects" does not exist, skipping
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 07:46:54 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "fkb8dct7w2j1vl1r2bpstw5isc0" of relation "teachers" does not exist, skipping
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 07:46:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 07:46:55 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:46:55 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 07:46:55 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 07:46:55 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 07:46:55 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 07:46:55 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 07:46:55 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 07:46:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-16 07:46:56 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28b68663, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@135662ed, org.springframework.security.web.context.SecurityContextHolderFilter@50fd6eac, org.springframework.security.web.header.HeaderWriterFilter@5968baf8, org.springframework.web.filter.CorsFilter@3622cc01, org.springframework.security.web.authentication.logout.LogoutFilter@1acbcc9e, com.ujkz.memoire.security.JwtAuthenticationFilter@7087f564, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d3b72ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@476fa5fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@282af4f4, org.springframework.security.web.session.SessionManagementFilter@77526d0f, org.springframework.security.web.access.ExceptionTranslationFilter@3ee87443, org.springframework.security.web.access.intercept.AuthorizationFilter@4e0ebab2]
+2026-06-16 07:46:56 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-06-16 07:46:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/api'
+2026-06-16 07:46:57 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Started GestionMemoiresBackendApplication in 10.019 seconds (process running for 10.923)
+2026-06-16 07:46:57 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-06-16 07:46:57 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:46:57 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        teachers t1_0
+2026-06-16 07:46:57 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:46:57 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        teachers
+        (actif,grade,specialite,user_id) 
+    values
+        (?,?,?,?)
+2026-06-16 07:46:57 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        students s1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (actif,date_creation,derniere_connexion,email,nom,password,prenom,role) 
+    values
+        (?,?,?,?,?,?,?,?)
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        students
+        (actif,master_specialite,matricule,promotion,semestre,user_id) 
+    values
+        (?,?,?,?,?,?)
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        academic_years a1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        academic_years
+        (actif,date_debut,date_fin,libelle) 
+    values
+        (?,?,?,?)
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        semesters s1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.actif
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        semesters
+        (academic_year_id,actif,libelle) 
+    values
+        (?,?,?)
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        subjects s1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.actif,
+        t1_0.grade,
+        t1_0.specialite,
+        t1_0.user_id 
+    from
+        teachers t1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.date_creation,
+        u1_0.derniere_connexion,
+        u1_0.email,
+        u1_0.nom,
+        u1_0.password,
+        u1_0.prenom,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.academic_year_id,
+        s1_0.actif,
+        s1_0.libelle 
+    from
+        semesters s1_0
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.actif,
+        a1_0.date_debut,
+        a1_0.date_fin,
+        a1_0.libelle 
+    from
+        academic_years a1_0 
+    where
+        a1_0.id=?
+2026-06-16 07:46:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        subjects
+        (capacite_max,competences_requises,date_creation,date_publication,encadrant_id,mots_cles,objectifs,publie,resume,semestre_id,statut,superviseur_id,titre) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2026-06-16 08:34:23 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m59s967ms).
+2026-06-16 09:16:05 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (2 additions, 0 deletions, 1 modification)
+2026-06-16 09:16:05 [Thread-1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 09:16:05 [Thread-1] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [api] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.19/java.lang.Thread.run(Thread.java:840)
+2026-06-16 09:16:05 [Thread-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 09:16:05 [Thread-1] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 09:16:06 [Thread-1] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 09:16:07 [Thread-1] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 09:16:07 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-16 09:16:07 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-16 09:16:08 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - Starting GestionMemoiresBackendApplication using Java 17.0.19 with PID 30272 (/Users/mavie/Downloads/Projet_Tutore/GestionMemoiresBackend/target/classes started by mavie in /Users/mavie/Downloads/Projet_Tutore)
+2026-06-16 09:16:08 [restartedMain] DEBUG c.u.m.G.GestionMemoiresBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-16 09:16:08 [restartedMain] INFO  c.u.m.G.GestionMemoiresBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-16 09:16:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-16 09:16:12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 407 ms. Found 6 JPA repository interfaces.
+2026-06-16 09:16:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2026-06-16 09:16:15 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-16 09:16:15 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-16 09:16:15 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-06-16 09:16:15 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6880 ms
+2026-06-16 09:16:16 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-16 09:16:16 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-16 09:16:16 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-06-16 09:16:16 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@737de960
+2026-06-16 09:16:16 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-06-16 09:16:16 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-16 09:16:18 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-16 09:16:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 09:16:18 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:18 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "semesters" does not exist, skipping
+2026-06-16 09:16:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 09:16:18 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:18 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "students" does not exist, skipping
+2026-06-16 09:16:18 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "subjects" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "teachers" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "academic_years" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "semesters" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "students" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "subjects" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "teachers" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2026-06-16 09:16:19 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table academic_years (
+        actif boolean not null,
+        date_debut date,
+        date_fin date,
+        id bigserial not null,
+        libelle varchar(255) not null unique,
+        primary key (id)
+    )
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table semesters (
+        actif boolean not null,
+        academic_year_id bigint not null,
+        id bigserial not null,
+        libelle varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table students (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        master_specialite varchar(255),
+        matricule varchar(255) not null unique,
+        promotion varchar(255),
+        semestre varchar(255),
+        primary key (id)
+    )
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table subjects (
+        capacite_max integer not null,
+        publie boolean not null,
+        date_creation timestamp(6),
+        date_publication timestamp(6),
+        encadrant_id bigint not null,
+        id bigserial not null,
+        semestre_id bigint not null,
+        superviseur_id bigint not null,
+        competences_requises varchar(255),
+        mots_cles varchar(255),
+        objectifs TEXT,
+        resume TEXT,
+        statut varchar(255) check (statut in ('OUVERT','FERME','ARCHIVE')),
+        titre varchar(255) not null,
+        primary key (id)
+    )
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table teachers (
+        actif boolean not null,
+        id bigserial not null,
+        user_id bigint not null unique,
+        grade varchar(255) not null check (grade in ('MAITRE_DE_CONFERENCES','PROFESSEUR','ASSISTANT')),
+        specialite varchar(255),
+        primary key (id)
+    )
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table users (
+        actif boolean not null,
+        date_creation timestamp(6),
+        derniere_connexion timestamp(6),
+        id bigserial not null,
+        email varchar(255) not null unique,
+        nom varchar(255) not null,
+        password varchar(255) not null,
+        prenom varchar(255) not null,
+        role varchar(255) not null check (role in ('ETUDIANT','ENSEIGNANT','RESPONSABLE_MASTER','ADMINISTRATEUR')),
+        primary key (id)
+    )
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       add constraint FK7bpjt91jpr48u09fuq4g2luw0 
+       foreign key (academic_year_id) 
+       references academic_years
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       add constraint FKdt1cjx5ve5bdabmuuf3ibrwaq 
+       foreign key (user_id) 
+       references users
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKi7x9osnxmu9muenkl2qo9flyt 
+       foreign key (encadrant_id) 
+       references teachers
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKbhcv20mcmy8e5lbx2juueegx1 
+       foreign key (semestre_id) 
+       references semesters
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       add constraint FKf1y05ioviplv3oolgifhqtsck 
+       foreign key (superviseur_id) 
+       references teachers
+2026-06-16 09:16:19 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       add constraint FKb8dct7w2j1vl1r2bpstw5isc0 
+       foreign key (user_id) 
+       references users
+2026-06-16 09:16:19 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 09:16:20 [restartedMain] DEBUG c.u.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-06-16 09:16:20 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationController': Lookup method resolution failed
+2026-06-16 09:16:20 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists semesters 
+       drop constraint if exists FK7bpjt91jpr48u09fuq4g2luw0
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists students 
+       drop constraint if exists FKdt1cjx5ve5bdabmuuf3ibrwaq
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKi7x9osnxmu9muenkl2qo9flyt
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKbhcv20mcmy8e5lbx2juueegx1
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists subjects 
+       drop constraint if exists FKf1y05ioviplv3oolgifhqtsck
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists teachers 
+       drop constraint if exists FKb8dct7w2j1vl1r2bpstw5isc0
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists academic_years cascade
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists semesters cascade
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists students cascade
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists subjects cascade
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists teachers cascade
+2026-06-16 09:16:20 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2026-06-16 09:16:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-06-16 09:16:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-06-16 09:16:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-16 09:16:20 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-16 09:16:20 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:351) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1291) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1186) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at com.ujkz.memoire.GestionMemoiresBackend.GestionMemoiresBackendApplication.main(GestionMemoiresBackendApplication.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.ujkz.memoire.controller.ApplicationController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@701f2ead]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:459) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Application
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2506) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.13.jar:6.0.13]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Application
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:469) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 30 common frames omitted
