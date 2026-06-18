@@ -1,20 +1,20 @@
 package com.ujkz.memoire.GestionMemoiresBackend;
 
-import com.ujkz.memoire.entity.User;
-import com.ujkz.memoire.entity.Teacher;
-import com.ujkz.memoire.entity.Student;
-import com.ujkz.memoire.entity.AcademicYear;
-import com.ujkz.memoire.entity.Semester;
-import com.ujkz.memoire.entity.Subject;
-import com.ujkz.memoire.enums.UserRole;
-import com.ujkz.memoire.enums.Grade;
-import com.ujkz.memoire.enums.SubjectStatus;
-import com.ujkz.memoire.repository.UserRepository;
-import com.ujkz.memoire.repository.TeacherRepository;
-import com.ujkz.memoire.repository.StudentRepository;
-import com.ujkz.memoire.repository.AcademicYearRepository;
-import com.ujkz.memoire.repository.SemesterRepository;
-import com.ujkz.memoire.repository.SubjectRepository;
+import com.ujkz.memoire.GestionMemoiresBackend.entity.User;
+import com.ujkz.memoire.GestionMemoiresBackend.entity.Teacher;
+import com.ujkz.memoire.GestionMemoiresBackend.entity.Student;
+import com.ujkz.memoire.GestionMemoiresBackend.entity.AcademicYear;
+import com.ujkz.memoire.GestionMemoiresBackend.entity.Semester;
+import com.ujkz.memoire.GestionMemoiresBackend.entity.Subject;
+import com.ujkz.memoire.GestionMemoiresBackend.enums.UserRole;
+import com.ujkz.memoire.GestionMemoiresBackend.enums.Grade;
+import com.ujkz.memoire.GestionMemoiresBackend.enums.SubjectStatus;
+import com.ujkz.memoire.GestionMemoiresBackend.repository.UserRepository;
+import com.ujkz.memoire.GestionMemoiresBackend.repository.TeacherRepository;
+import com.ujkz.memoire.GestionMemoiresBackend.repository.StudentRepository;
+import com.ujkz.memoire.GestionMemoiresBackend.repository.AcademicYearRepository;
+import com.ujkz.memoire.GestionMemoiresBackend.repository.SemesterRepository;
+import com.ujkz.memoire.GestionMemoiresBackend.repository.SubjectRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,9 +25,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDate;
 
-@SpringBootApplication(scanBasePackages = "com.ujkz.memoire")
-@EnableJpaRepositories(basePackages = "com.ujkz.memoire.repository")
-@EntityScan(basePackages = "com.ujkz.memoire.entity")
+@SpringBootApplication(scanBasePackages = "com.ujkz.memoire.GestionMemoiresBackend")
+@EnableJpaRepositories(basePackages = "com.ujkz.memoire.GestionMemoiresBackend.repository")
+@EntityScan(basePackages = "com.ujkz.memoire.GestionMemoiresBackend.entity")
 public class GestionMemoiresBackendApplication {
 
 	public static void main(String[] args) {
@@ -75,7 +75,7 @@ public class GestionMemoiresBackendApplication {
 				teacher.setSpecialite("Informatique");
 				teacher.setActif(true);
 				teacherRepository.save(teacher);
-				
+
 				System.out.println("✅ Enseignant créé : " + teacherUser.getPrenom() + " " + teacherUser.getNom() + " (Grade: Maître de Conférences)");
 			}
 			

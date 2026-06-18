@@ -5,8 +5,8 @@ spring:
   # PostgreSQL Database Configuration
   datasource:
     url: jdbc:postgresql://127.0.0.1:5432/gestion_memoires_db
-    username: mavie
-    password: mavie
+    username:
+    password:
     driver-class-name: org.postgresql.Driver
   
   # JPA Configuration
