@@ -6,6 +6,7 @@ import com.ujkz.memoire.GestionMemoiresBackend.dto.MessageResponse;
 import com.ujkz.memoire.GestionMemoiresBackend.entity.User;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.UserRepository;
 import com.ujkz.memoire.GestionMemoiresBackend.security.JwtTokenProvider;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -32,6 +33,7 @@ public class AuthController {
     @Autowired
     JwtTokenProvider tokenProvider;
 
+    @Operation(summary = "Se connecter")
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
