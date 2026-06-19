@@ -3,6 +3,7 @@ package com.ujkz.memoire.GestionMemoiresBackend.controller;
 import com.ujkz.memoire.GestionMemoiresBackend.dto.SubjectDTO;
 import com.ujkz.memoire.GestionMemoiresBackend.entity.Subject;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.SubjectRepository;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ public class SubjectController {
     private SubjectRepository subjectRepository;
 
     // GET tous les sujets publiés
+    @Operation(summary = "Voir la liste des sujets publies")
     @GetMapping
     public ResponseEntity<List<SubjectDTO>> getAllPublishedSubjects() {
         List<Subject> subjects = subjectRepository.findByPublieTrue();
@@ -29,6 +31,7 @@ public class SubjectController {
     }
 
     // GET sujet par ID
+    @Operation(summary = "Obtenir les details d'un sujet")
     @GetMapping("/{id}")
     public ResponseEntity<SubjectDTO> getSubjectById(@PathVariable Long id) {
         Subject subject = subjectRepository.findById(id)
@@ -37,6 +40,7 @@ public class SubjectController {
     }
 
     // GET sujets par enseignant
+    @Operation(summary = "Obtenir la liste des sujets par enseignant")
     @GetMapping("/teacher/{teacherId}")
     public ResponseEntity<List<SubjectDTO>> getSubjectsByTeacher(@PathVariable Long teacherId) {
         List<Subject> subjects = subjectRepository.findByEncadrantId(teacherId);
