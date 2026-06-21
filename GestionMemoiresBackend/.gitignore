@@ -30,4 +30,10 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
+.vscode/settings.json
 .vscode/
+.vscod/**
+
+logs/
+logs/gestion-memoires.log
+logs/**
