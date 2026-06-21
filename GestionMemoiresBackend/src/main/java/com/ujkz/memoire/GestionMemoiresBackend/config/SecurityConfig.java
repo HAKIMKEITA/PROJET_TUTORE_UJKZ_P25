@@ -58,6 +58,7 @@ public class SecurityConfig {
                 // 1. PUBLIC ENDPOINTS - Accessibles sans authentification
                 // ============================================
                 .requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/test/**").permitAll()
                 .requestMatchers("/public/**").permitAll()
                 

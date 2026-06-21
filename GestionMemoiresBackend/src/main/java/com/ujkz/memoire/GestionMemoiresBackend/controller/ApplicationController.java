@@ -11,6 +11,11 @@ import com.ujkz.memoire.GestionMemoiresBackend.enums.SubjectStatus;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.ApplicationRepository;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.StudentRepository;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.SubjectRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,6 +39,7 @@ public class ApplicationController {
     private SubjectRepository subjectRepository;
 
     // POST - Étudiant postule à un sujet
+    @Operation(summary = "Candidater à un sujet")
     @PostMapping("/apply")
     @PreAuthorize("hasRole('ETUDIANT')")
     public ResponseEntity<?> applyToSubject(@RequestBody ApplicationRequest request) {
@@ -76,6 +82,7 @@ public class ApplicationController {
     }
 
     // GET - Récupérer les candidatures d'un étudiant
+    @Operation(summary = "Récupérer les candidatures d'un étudiant")
     @GetMapping("/student/{studentId}")
     @PreAuthorize("hasRole('ETUDIANT') or hasRole('ENSEIGNANT')")
     public ResponseEntity<List<ApplicationDTO>> getApplicationsByStudent(@PathVariable Long studentId) {
@@ -87,6 +94,7 @@ public class ApplicationController {
     }
 
     // GET - Récupérer les candidatures d'un sujet
+    @Operation(summary = "Récupérer les candidatures d'un sujet")
     @GetMapping("/subject/{subjectId}")
     @PreAuthorize("hasRole('ENSEIGNANT')")
     public ResponseEntity<List<ApplicationDTO>> getApplicationsBySubject(@PathVariable Long subjectId) {
@@ -98,6 +106,7 @@ public class ApplicationController {
     }
 
     // PATCH - Accepter une candidature
+    @Operation(summary = "Accepter une candidature")
     @PatchMapping("/{applicationId}/accept")
     @PreAuthorize("hasRole('ENSEIGNANT')")
     public ResponseEntity<?> acceptApplication(@PathVariable Long applicationId,
@@ -130,6 +139,7 @@ public class ApplicationController {
     }
 
     // PATCH - Refuser une candidature
+    @Operation(summary = "Refuser une candidature")
     @PatchMapping("/{applicationId}/reject")
     @PreAuthorize("hasRole('ENSEIGNANT')")
     public ResponseEntity<?> rejectApplication(@PathVariable Long applicationId,
