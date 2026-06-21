@@ -54,20 +54,99 @@ public class SecurityConfig {
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
             .authorizeHttpRequests()
+                // ============================================
+                // 1. PUBLIC ENDPOINTS - Accessibles sans authentification
+                // ============================================
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/test/**").permitAll()
+                .requestMatchers("/public/**").permitAll()
+                
+                // Sujets - accès public en lecture
                 .requestMatchers("/subjects").permitAll()
-                .requestMatchers("/subjects/**").permitAll()
-                // Endpoints pour les étudiants
+                .requestMatchers("/subjects/{id}").permitAll()
+                .requestMatchers("/subjects/teacher/{teacherId}").permitAll()
+                
+                // ============================================
+                // 2. ETUDIANT ENDPOINTS - Réservés aux étudiants
+                // ============================================
                 .requestMatchers("/applications/apply").hasRole("ETUDIANT")
-                .requestMatchers("/applications/student/**").hasAnyRole("ETUDIANT", "ENSEIGNANT")
-                // Endpoints pour les enseignants
+                
+                // ============================================
+                // 3. ENSEIGNANT ENDPOINTS - Réservés aux enseignants
+                // ============================================
                 .requestMatchers("/applications/subject/**").hasRole("ENSEIGNANT")
                 .requestMatchers("/applications/**/accept").hasRole("ENSEIGNANT")
                 .requestMatchers("/applications/**/reject").hasRole("ENSEIGNANT")
-                // Endpoints pour les administrateurs
+                
+                // ============================================
+                // 4. MEMOIRE ENDPOINTS
+                // ============================================
+                // Accès aux mémoires - authentifié
+                .requestMatchers("/memoires").authenticated()
+                .requestMatchers("/memoires/student/**").authenticated()
+                .requestMatchers("/memoires/subject/**").authenticated()
+                .requestMatchers("/memoires/soutenables").hasAnyRole("RESPONSABLE_MASTER", "ENSEIGNANT", "ADMINISTRATEUR")
+                
+                // Mise à jour de l'avancement - authentifié
+                .requestMatchers("/memoires/**/avancement").authenticated()
+                
+                // Validation de la soutenabilité - réservé aux enseignants
+                .requestMatchers("/memoires/**/soutenabilite").hasRole("ENSEIGNANT")
+                
+                // Création d'un mémoire à partir d'une candidature - enseignants et admin
+                .requestMatchers("/memoires/from-application/**").hasAnyRole("ENSEIGNANT", "ADMINISTRATEUR")
+                
+                // Statistiques des mémoires - responsables et admin
+                .requestMatchers("/memoires/stats").hasAnyRole("RESPONSABLE_MASTER", "ADMINISTRATEUR")
+                
+                // ============================================
+                // 5. DOCUMENTS ENDPOINTS
+                // ============================================
+                .requestMatchers("/documents/**").authenticated()
+                
+                // ============================================
+                // 6. MILESTONES ENDPOINTS
+                // ============================================
+                .requestMatchers("/milestones/**").authenticated()
+                
+                // ============================================
+                // 7. OBSERVATIONS ENDPOINTS
+                // ============================================
+                .requestMatchers("/observations/**").authenticated()
+                
+                // ============================================
+                // 8. CAMPAGNES ENDPOINTS - Réservés aux administrateurs et responsables
+                // ============================================
+                .requestMatchers("/campagnes/**").hasAnyRole("ADMINISTRATEUR", "RESPONSABLE_MASTER")
+                
+                // ============================================
+                // 9. DEFENSE SESSIONS ENDPOINTS
+                // ============================================
+                // Gestion des sessions - réservé aux responsables et admin
+                .requestMatchers("/defense-sessions/**").hasAnyRole("RESPONSABLE_MASTER", "ADMINISTRATEUR")
+                
+                // Soutenances - accès aux responsables, enseignants et admin
+                .requestMatchers("/defenses/**").hasAnyRole("RESPONSABLE_MASTER", "ENSEIGNANT", "ADMINISTRATEUR")
+                
+                // ============================================
+                // 10. JURY ENDPOINTS - Réservés aux responsables et admin
+                // ============================================
+                .requestMatchers("/juries/**").hasAnyRole("RESPONSABLE_MASTER", "ADMINISTRATEUR")
+                
+                // ============================================
+                // 11. GRADES ENDPOINTS - Réservés aux responsables et admin
+                // ============================================
+                .requestMatchers("/grades/**").hasAnyRole("RESPONSABLE_MASTER", "ADMINISTRATEUR")
+                
+                // ============================================
+                // 12. USERS ENDPOINTS - Réservés aux administrateurs
+                // ============================================
                 .requestMatchers("/users/**").hasRole("ADMINISTRATEUR")
+                
+                // ============================================
+                // 13. ALL OTHER ENDPOINTS - Doivent être authentifiés
+                // ============================================
                 .anyRequest().authenticated()
             .and()
             .authenticationProvider(authenticationProvider())

@@ -18,4 +18,20 @@ public class SubjectDTO {
     private String statut;
     private boolean publie;
     private LocalDateTime dateCreation;
+    public Long getSemestreId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSemestreId'");
+    }
+    public Long getEncadrantId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getEncadrantId'");
+    }
+    public Long getSuperviseurId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSuperviseurId'");
+    }
+    public boolean getPublie() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPublie'");
+    }
 }
