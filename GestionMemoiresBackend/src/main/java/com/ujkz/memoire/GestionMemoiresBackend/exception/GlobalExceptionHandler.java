@@ -1,10 +1,6 @@
-package com.ujkz.memoire.GestionMemoiresBackend.exeption;
+package com.ujkz.memoire.GestionMemoiresBackend.exception;
 
 import com.ujkz.memoire.GestionMemoiresBackend.dto.MessageResponse;
-
-import javax.management.relation.RelationNotFoundException;
-
-import org.aspectj.weaver.BCException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -15,9 +11,15 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(RelationNotFoundException.class)
-    public ResponseEntity<MessageResponse> handleResourceNotFound(RelationNotFoundException ex) {
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<MessageResponse> handleResourceNotFound(ResourceNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(new MessageResponse(ex.getMessage()));
+    }
+
+    @ExceptionHandler(BusinessException.class)
+    public ResponseEntity<MessageResponse> handleBusinessException(BusinessException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body(new MessageResponse(ex.getMessage()));
     }
 
@@ -33,14 +35,9 @@ public class GlobalExceptionHandler {
                 .body(new MessageResponse("Vous n'avez pas les droits nécessaires"));
     }
 
-    @ExceptionHandler(BCException.class)
-    public ResponseEntity<MessageResponse> handleBusinessException(BCException ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(new MessageResponse(ex.getMessage()));
-    }
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<MessageResponse> handleGenericException(Exception ex) {
+        ex.printStackTrace();
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new MessageResponse("Une erreur est survenue: " + ex.getMessage()));
     }

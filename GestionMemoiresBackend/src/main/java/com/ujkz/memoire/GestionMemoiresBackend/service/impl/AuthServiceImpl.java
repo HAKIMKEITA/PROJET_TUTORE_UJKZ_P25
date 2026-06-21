@@ -3,7 +3,7 @@ package com.ujkz.memoire.GestionMemoiresBackend.service.impl;
 import com.ujkz.memoire.GestionMemoiresBackend.dto.LoginRequest;
 import com.ujkz.memoire.GestionMemoiresBackend.dto.LoginResponse;
 import com.ujkz.memoire.GestionMemoiresBackend.entity.User;
-import com.ujkz.memoire.GestionMemoiresBackend.exeption.ResourceNotFoundException;
+import com.ujkz.memoire.GestionMemoiresBackend.exception.ResourceNotFoundException;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.UserRepository;
 import com.ujkz.memoire.GestionMemoiresBackend.security.JwtTokenProvider;
 import com.ujkz.memoire.GestionMemoiresBackend.service.AuthService;

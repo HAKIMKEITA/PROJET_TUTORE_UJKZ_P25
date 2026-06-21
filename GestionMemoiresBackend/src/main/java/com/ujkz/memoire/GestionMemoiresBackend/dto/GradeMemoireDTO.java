@@ -1,6 +1,5 @@
 package com.ujkz.memoire.GestionMemoiresBackend.dto;
 
-import com.ujkz.memoire.GestionMemoiresBackend.enums.Mention;
 import lombok.Data;
 import java.time.LocalDateTime;
 

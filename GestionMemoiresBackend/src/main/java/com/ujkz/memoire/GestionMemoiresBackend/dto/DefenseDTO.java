@@ -18,6 +18,7 @@ public class DefenseDTO {
     private Boolean validee;
     private Integer dureeMinutes;
     private String lienVisio;
+    private String rapport;
     private Integer noteFinale;
     private String mention;
 }

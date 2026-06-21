@@ -11,27 +11,19 @@ public class SubjectDTO {
     private String objectifs;
     private String competencesRequises;
     private String motsCles;
+    
+    // Champs pour les IDs (nécessaires pour la création/mise à jour)
+    private Long encadrantId;
+    private Long superviseurId;
+    private Long semestreId;
+    
+    // Champs pour l'affichage
     private String encadrantNom;
     private String superviseurNom;
     private String semestreLibelle;
-    private int capaciteMax;
+    
+    private Integer capaciteMax;
     private String statut;
-    private boolean publie;
+    private Boolean publie;
     private LocalDateTime dateCreation;
-    public Long getSemestreId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSemestreId'");
-    }
-    public Long getEncadrantId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEncadrantId'");
-    }
-    public Long getSuperviseurId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSuperviseurId'");
-    }
-    public boolean getPublie() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPublie'");
-    }
 }

@@ -12,5 +12,6 @@ public interface CampagneService {
     CampagneDTO createCampagne(CampagneDTO campagneDTO);
     CampagneDTO toggleCampagne(Long id);
     CampagneDTO updateCampagne(Long id, CampagneDTO campagneDTO);
+    void deleteCampagne(Long id);
     Campagne getCampagneEntity(Long id);
 }

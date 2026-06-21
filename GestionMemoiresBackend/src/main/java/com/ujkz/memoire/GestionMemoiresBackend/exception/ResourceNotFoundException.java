@@ -1,4 +1,4 @@
-package com.ujkz.memoire.GestionMemoiresBackend.exeption;
+package com.ujkz.memoire.GestionMemoiresBackend.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

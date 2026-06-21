@@ -1,10 +1,12 @@
-/*package com.ujkz.memoire.GestionMemoiresBackend.service.impl;
+package com.ujkz.memoire.GestionMemoiresBackend.service.impl;
 
 import com.ujkz.memoire.GestionMemoiresBackend.dto.SubjectDTO;
 import com.ujkz.memoire.GestionMemoiresBackend.entity.Subject;
 import com.ujkz.memoire.GestionMemoiresBackend.entity.Teacher;
 import com.ujkz.memoire.GestionMemoiresBackend.entity.Semester;
 import com.ujkz.memoire.GestionMemoiresBackend.enums.SubjectStatus;
+import com.ujkz.memoire.GestionMemoiresBackend.exception.BusinessException;
+import com.ujkz.memoire.GestionMemoiresBackend.exception.ResourceNotFoundException;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.SubjectRepository;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.TeacherRepository;
 import com.ujkz.memoire.GestionMemoiresBackend.repository.SemesterRepository;
@@ -67,6 +69,11 @@ public class SubjectServiceImpl implements SubjectService {
         Semester semester = semesterRepository.findById(subjectDTO.getSemestreId())
                 .orElseThrow(() -> new ResourceNotFoundException("Semestre non trouvé"));
 
+        // Vérifier que le superviseur a le grade minimum requis
+        if (superviseur.getGrade() == null) {
+            throw new BusinessException("Le superviseur doit avoir un grade défini");
+        }
+
         Subject subject = new Subject();
         subject.setTitre(subjectDTO.getTitre());
         subject.setResume(subjectDTO.getResume());
@@ -124,9 +131,6 @@ public class SubjectServiceImpl implements SubjectService {
     public SubjectDTO changeSubjectStatus(Long id, SubjectStatus status) {
         Subject subject = getSubjectEntity(id);
         subject.setStatut(status);
-        if (status == SubjectStatus.FERME) {
-            // Fermer les candidatures
-        }
         Subject updated = subjectRepository.save(subject);
         return convertToDTO(updated);
     }
@@ -159,11 +163,9 @@ public class SubjectServiceImpl implements SubjectService {
         dto.setSemestreId(subject.getSemestre().getId());
         dto.setSemestreLibelle(subject.getSemestre().getLibelle());
         dto.setCapaciteMax(subject.getCapaciteMax());
-        dto.setStatut(subject.getStatut().toString());
+        dto.setStatut(subject.getStatut() != null ? subject.getStatut().toString() : null);
         dto.setPublie(subject.isPublie());
         dto.setDateCreation(subject.getDateCreation());
         return dto;
     }
 }
-
-*/

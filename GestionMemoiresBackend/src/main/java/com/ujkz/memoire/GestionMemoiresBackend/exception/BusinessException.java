@@ -1,4 +1,4 @@
-package com.ujkz.memoire.GestionMemoiresBackend.exeption;
+package com.ujkz.memoire.GestionMemoiresBackend.exception;
 
 public class BusinessException extends RuntimeException {
     public BusinessException(String message) {
